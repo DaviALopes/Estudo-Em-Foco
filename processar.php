@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Salvar os dados no arquivo JSON
     file_put_contents($arquivo, json_encode($dadosExistentes, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-    // Redirecionar para a página "pagina-aluno.php" com uma mensagem de sucesso
+  
     header('Location: pagina-aluno.php?success=Respostas salvas com sucesso!');
     exit;
 } else {
-    // Redirecionar caso não seja uma requisição POST
+    
     header('Location: index.php');
     exit;
 }
